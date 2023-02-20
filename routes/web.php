@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('index');
+});
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/Dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 
 
@@ -26,7 +30,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 |--------------------------------------------------------------------------
 |
 */
-Route::view('/Dashboard', 'dashboard');
 Route::view('/Shipping', 'shipping');
 Route::view('/Discount', 'discount');
 
