@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// index routing via Route feature
-Route::redirect('/', '/Dashboard');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +62,4 @@ Route::prefix('Settings')->group(function () {
     Route::view('/', 'settings/index');
     Route::view('General', 'settings/general');
 });
+
