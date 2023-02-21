@@ -180,15 +180,33 @@
     <div class="menu-container flex-grow-1">
         <ul id="menu" class="menu">
             <li>
-                <a href="/Dashboard">
+                <a href="{{ route('dashboard') }}">
                     <i data-acorn-icon="shop" class="icon" data-acorn-size="18"></i>
                     <span class="label">Dashboard</span>
                 </a>
             </li>
             <li>
+                <a href="#customers" data-href="/Customers/List">
+                    <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
+                    <span class="label">Usuarios</span>
+                </a>
+                <ul id="customers">
+                    <li>
+                        <a href="/Customers/List">
+                            <span class="label">List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Customers/Detail">
+                            <span class="label">Detail</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="#products" data-href="/Products/List">
-                    <i data-acorn-icon="cupcake" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Products</span>
+                    <i data-acorn-icon="car" class="icon" data-acorn-size="18"></i>
+                    <span class="label">Autos</span>
                 </a>
                 <ul id="products">
                     <li>
@@ -206,7 +224,7 @@
             <li>
                 <a href="#orders" data-href="/Orders/List">
                     <i data-acorn-icon="cart" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Orders</span>
+                    <span class="label">Ventas</span>
                 </a>
                 <ul id="orders">
                     <li>
@@ -221,24 +239,14 @@
                     </li>
                 </ul>
             </li>
+
             <li>
-                <a href="#customers" data-href="/Customers/List">
-                    <i data-acorn-icon="user" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Customers</span>
+                <a href="{{ route('admin.discount') }}">
+                    <i data-acorn-icon="messages" class="icon" data-acorn-size="18"></i>
+                    <span class="label">Solicitudes del Asesor</span>
                 </a>
-                <ul id="customers">
-                    <li>
-                        <a href="/Customers/List">
-                            <span class="label">List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Customers/Detail">
-                            <span class="label">Detail</span>
-                        </a>
-                    </li>
-                </ul>
             </li>
+
             <li>
                 <a href="#storefront" data-href="/Storefront/Home">
                     <i data-acorn-icon="screen" class="icon" data-acorn-size="18"></i>
@@ -283,17 +291,12 @@
                 </ul>
             </li>
             <li>
-                <a href="/Shipping">
+                <a href="{{ route('admin.shipping') }}">
                     <i data-acorn-icon="shipping" class="icon" data-acorn-size="18"></i>
                     <span class="label">Shipping</span>
                 </a>
             </li>
-            <li>
-                <a href="/Discount">
-                    <i data-acorn-icon="tag" class="icon" data-acorn-size="18"></i>
-                    <span class="label">Discount</span>
-                </a>
-            </li>
+
             <li>
                 <a href="/Settings">
                     <i data-acorn-icon="gear" class="icon" data-acorn-size="18"></i>
