@@ -211,12 +211,12 @@
                 <ul id="products">
                     <li>
                         <a href="/Products/List">
-                            <span class="label">List</span>
+                            <span class="label">Crear Venta</span>
                         </a>
                     </li>
                     <li>
                         <a href="/Products/Detail">
-                            <span class="label">Detail</span>
+                            <span class="label">Ver Venta</span>
                         </a>
                     </li>
                 </ul>
